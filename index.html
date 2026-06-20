@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>KostLabs — Open-Source DevOps Infrastructure</title>
+  <meta name="description" content="KostLabs is an R&D organization dedicated to advancing DevOps and software engineering through open-source boilerplate code and agents built on best practices and CISO standards." />
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" />
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            ink:    '#1A1916',
+            slash:  '#8E8572',
+            cream:  '#F2EFE9',
+            mist:   '#EAE6DC',
+            dimmed: '#C8C3B4',
+          },
+          fontFamily: {
+            sans: ['Inter', 'system-ui', 'sans-serif'],
+            mono: ['JetBrains Mono', 'monospace'],
+          },
+        },
+      },
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="bg-cream text-ink font-sans antialiased">
+
+  <!-- ─── NAV ─────────────────────────────────────────────────────── -->
+  <header class="fixed top-0 inset-x-0 z-50 bg-cream/90 backdrop-blur-sm border-b border-mist">
+    <nav class="max-w-6xl mx-auto px-6 lg:px-8 h-16 flex items-center justify-between">
+      <!-- Logo -->
+      <a href="#" class="flex items-center gap-3">
+        <picture>
+          <source srcset="assets/image/logo_no_bg_dark_mode.png" media="(prefers-color-scheme: dark)" />
+          <img src="assets/image/logo_no_bg_light_mode.png" alt="KostLabs logo" class="h-8 w-auto" />
+        </picture>
+        <span class="font-semibold text-ink tracking-tight hidden sm:inline">KLabs</span>
+      </a>
+
+      <!-- Desktop links -->
+      <ul class="hidden md:flex items-center gap-8 text-sm font-medium text-ink/70">
+        <li><a href="#about"     class="nav-link hover:text-ink transition-colors">About</a></li>
+        <li><a href="#why"       class="nav-link hover:text-ink transition-colors">Why KLabs</a></li>
+        <li><a href="#projects"  class="nav-link hover:text-ink transition-colors">Projects</a></li>
+        <li><a href="#principles" class="nav-link hover:text-ink transition-colors">Principles</a></li>
+      </ul>
+
+      <!-- CTA -->
+      <a href="https://github.com/KostLabs" target="_blank" rel="noopener"
+         class="flex items-center gap-2 text-sm font-medium bg-ink text-cream px-4 py-2 rounded-sm hover:bg-ink/80 transition-colors">
+        <i class="fa-brands fa-github text-base"></i>
+        <span class="hidden sm:inline">GitHub</span>
+      </a>
+    </nav>
+  </header>
+
+  <!-- ─── HERO ─────────────────────────────────────────────────────── -->
+  <section class="min-h-screen flex flex-col items-center justify-center px-6 pt-24 pb-16 text-center">
+    <div class="max-w-4xl mx-auto space-y-8">
+
+      <div class="flex justify-center mb-6">
+        <picture>
+          <source srcset="assets/image/logo_no_bg_dark_mode.png" media="(prefers-color-scheme: dark)" />
+          <img src="assets/image/logo_no_bg_light_mode.png" alt="KostLabs" class="h-24 sm:h-32 lg:h-40 w-auto" />
+        </picture>
+      </div>
+
+      <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight tracking-tight text-ink">
+        Open-source infrastructure<br class="hidden sm:block" />
+        <span class="text-slash">built for DevOps teams.</span>
+      </h1>
+
+      <p class="text-base sm:text-lg lg:text-xl text-ink/60 max-w-2xl mx-auto leading-relaxed">
+        KostLabs is an R&amp;D organization dedicated to advancing DevOps and software engineering — delivering open-source boilerplate and agents that follow best practices and CISO security standards.
+      </p>
+
+      <div class="flex flex-col sm:flex-row gap-3 justify-center pt-2">
+        <a href="#projects"
+           class="inline-flex items-center justify-center gap-2 bg-ink text-cream px-6 py-3 text-sm font-medium rounded-sm hover:bg-ink/80 transition-colors">
+          <i class="fa-solid fa-layer-group"></i>
+          Explore Projects
+        </a>
+        <a href="https://github.com/KostLabs" target="_blank" rel="noopener"
+           class="inline-flex items-center justify-center gap-2 border border-slash text-ink px-6 py-3 text-sm font-medium rounded-sm hover:bg-mist transition-colors">
+          <i class="fa-brands fa-github"></i>
+          View on GitHub
+        </a>
+      </div>
+    </div>
+
+    <!-- scroll hint -->
+    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 text-slash animate-bounce hidden md:block">
+      <i class="fa-solid fa-chevron-down text-sm"></i>
+    </div>
+  </section>
+
+  <!-- ─── ABOUT ─────────────────────────────────────────────────────── -->
+  <section id="about" class="bg-ink text-cream py-24 px-6">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-16 items-center">
+      <div class="fade-in space-y-6">
+        <p class="text-slash text-xs font-mono uppercase tracking-widest">What we do</p>
+        <h2 class="text-3xl sm:text-4xl font-bold leading-snug">
+          Simplifying the lives of developers<br/>and operations teams.
+        </h2>
+        <p class="text-cream/60 leading-relaxed">
+          KostLabs is an R&amp;D organization dedicated to advancing the state of the art in DevOps and software engineering. We produce open-source boilerplate code and intelligent agents that empower teams to deliver high-quality, secured software at enterprise scale.
+        </p>
+        <p class="text-cream/60 leading-relaxed">
+          Every library and tool we ship is grounded in established engineering principles, CISO standards, and the hard-won lessons of operating software in production environments.
+        </p>
+      </div>
+
+      <div class="fade-in grid grid-cols-2 gap-4">
+        <div class="bg-ink border border-cream/10 rounded-sm p-6 space-y-3">
+          <i class="fa-solid fa-shield-halved text-slash text-2xl"></i>
+          <h3 class="font-semibold">Security-first</h3>
+          <p class="text-cream/50 text-sm leading-relaxed">Every component is built to meet CISO standards out of the box.</p>
+        </div>
+        <div class="bg-ink border border-cream/10 rounded-sm p-6 space-y-3">
+          <i class="fa-solid fa-code-branch text-slash text-2xl"></i>
+          <h3 class="font-semibold">Open-source</h3>
+          <p class="text-cream/50 text-sm leading-relaxed">All libraries are freely available and community-driven.</p>
+        </div>
+        <div class="bg-ink border border-cream/10 rounded-sm p-6 space-y-3">
+          <i class="fa-solid fa-rocket text-slash text-2xl"></i>
+          <h3 class="font-semibold">Enterprise scale</h3>
+          <p class="text-cream/50 text-sm leading-relaxed">Designed for teams that ship software in demanding environments.</p>
+        </div>
+        <div class="bg-ink border border-cream/10 rounded-sm p-6 space-y-3">
+          <i class="fa-solid fa-cube text-slash text-2xl"></i>
+          <h3 class="font-semibold">Boilerplate-ready</h3>
+          <p class="text-cream/50 text-sm leading-relaxed">Drop-in foundations so teams stop reinventing the wheel.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── WHY KLABS ─────────────────────────────────────────────────── -->
+  <section id="why" class="py-24 px-6 bg-cream">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-16 fade-in space-y-4">
+        <p class="text-slash text-xs font-mono uppercase tracking-widest">Why KostLabs</p>
+        <h2 class="text-3xl sm:text-4xl font-bold leading-snug">The problem every DevOps team faces.</h2>
+        <p class="text-ink/60 leading-relaxed">
+          Our founders bring deep experience in development operations and cybersecurity. Across many organizations, the same pattern emerges: boilerplate code repeating across projects, drifting out of sync with security standards, impossible to maintain at scale.
+        </p>
+      </div>
+
+      <!-- Row 1: Problems -->
+      <p class="text-xs font-mono uppercase tracking-widest text-ink/30 mb-4 fade-in">The problems</p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-6">
+        <div class="fade-in bg-mist rounded-sm p-8 space-y-4 card-hover">
+          <div class="w-10 h-10 rounded-sm bg-ink flex items-center justify-center">
+            <i class="fa-solid fa-rotate text-slash text-sm"></i>
+          </div>
+          <h3 class="font-semibold text-lg">Repeated boilerplate</h3>
+          <p class="text-ink/60 text-sm leading-relaxed">
+            The same scaffolding is written from scratch in project after project — dev time wasted, inconsistency introduced, vulnerabilities carried forward.
+          </p>
+        </div>
+
+        <div class="fade-in bg-mist rounded-sm p-8 space-y-4 card-hover" style="transition-delay:0.08s">
+          <div class="w-10 h-10 rounded-sm bg-ink flex items-center justify-center">
+            <i class="fa-solid fa-lock-open text-slash text-sm"></i>
+          </div>
+          <h3 class="font-semibold text-lg">Drifting standards</h3>
+          <p class="text-ink/60 text-sm leading-relaxed">
+            Security and compliance requirements evolve. Custom-rolled infrastructure rarely keeps pace, leaving organizations exposed without knowing it.
+          </p>
+        </div>
+
+        <div class="fade-in bg-mist rounded-sm p-8 space-y-4 card-hover sm:col-span-2 lg:col-span-1" style="transition-delay:0.16s">
+          <div class="w-10 h-10 rounded-sm bg-ink flex items-center justify-center">
+            <i class="fa-solid fa-code-merge text-slash text-sm"></i>
+          </div>
+          <h3 class="font-semibold text-lg">Fragmented tooling</h3>
+          <p class="text-ink/60 text-sm leading-relaxed">
+            Every team reinvents logging, secret management, and HTTP wiring. The result is a patchwork that's hard to audit, upgrade, or hand off.
+          </p>
+        </div>
+      </div>
+
+      <!-- Row 2: Solutions -->
+      <p class="text-xs font-mono uppercase tracking-widest text-ink/30 mb-4 fade-in">How we solve it</p>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <div class="fade-in bg-ink text-cream rounded-sm p-8 space-y-4 card-hover">
+          <div class="w-10 h-10 rounded-sm bg-cream/10 flex items-center justify-center">
+            <i class="fa-solid fa-box-open text-slash text-sm"></i>
+          </div>
+          <h3 class="font-semibold text-lg">Ready-to-use foundations</h3>
+          <p class="text-cream/60 text-sm leading-relaxed">
+            Drop-in open-source boilerplate that covers the common ground — so teams start from a solid, reviewed base instead of a blank slate.
+          </p>
+        </div>
+
+        <div class="fade-in bg-ink text-cream rounded-sm p-8 space-y-4 card-hover" style="transition-delay:0.08s">
+          <div class="w-10 h-10 rounded-sm bg-cream/10 flex items-center justify-center">
+            <i class="fa-solid fa-shield-halved text-slash text-sm"></i>
+          </div>
+          <h3 class="font-semibold text-lg">Security maintained for you</h3>
+          <p class="text-cream/60 text-sm leading-relaxed">
+            Every component is built to CISO standards and kept up to date — compliance doesn't drift because it's baked in from the start.
+          </p>
+        </div>
+
+        <div class="fade-in bg-ink text-cream rounded-sm p-8 space-y-4 card-hover sm:col-span-2 lg:col-span-1" style="transition-delay:0.16s">
+          <div class="w-10 h-10 rounded-sm bg-cream/10 flex items-center justify-center">
+            <i class="fa-solid fa-puzzle-piece text-slash text-sm"></i>
+          </div>
+          <h3 class="font-semibold text-lg">Consistent across projects</h3>
+          <p class="text-cream/60 text-sm leading-relaxed">
+            One shared toolkit means logging, secret management, and HTTP patterns look and behave the same — easy to audit, upgrade, and hand off.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PROJECTS ─────────────────────────────────────────────────── -->
+  <section id="projects" class="py-24 px-6 bg-mist">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-xl mx-auto mb-16 fade-in space-y-4">
+        <p class="text-slash text-xs font-mono uppercase tracking-widest">Open-source projects</p>
+        <h2 class="text-3xl sm:text-4xl font-bold">What we've built.</h2>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+<a href="https://github.com/KostLabs/golog" target="_blank" rel="noopener"
+           class="fade-in group bg-cream rounded-sm p-7 space-y-4 card-hover border border-dimmed/40" style="transition-delay:0.05s">
+          <div class="flex items-center justify-between">
+            <span class="font-mono text-xs text-slash uppercase tracking-widest">Go</span>
+            <i class="fa-brands fa-github text-ink/30 group-hover:text-ink transition-colors"></i>
+          </div>
+          <h3 class="font-semibold text-lg">golog</h3>
+          <p class="text-ink/60 text-sm leading-relaxed">
+            A simple JSON-based structured logger for Go. Consistent, observable log output without ceremony.
+          </p>
+          <span class="inline-flex items-center gap-1 text-slash text-xs font-medium">
+            View project <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </span>
+        </a>
+
+        <a href="https://github.com/KostLabs/go-ssm" target="_blank" rel="noopener"
+           class="fade-in group bg-cream rounded-sm p-7 space-y-4 card-hover border border-dimmed/40" style="transition-delay:0.10s">
+          <div class="flex items-center justify-between">
+            <span class="font-mono text-xs text-slash uppercase tracking-widest">Go</span>
+            <i class="fa-brands fa-github text-ink/30 group-hover:text-ink transition-colors"></i>
+          </div>
+          <h3 class="font-semibold text-lg">go-ssm</h3>
+          <p class="text-ink/60 text-sm leading-relaxed">
+            AWS SSM Parameter Store integration for Go applications. Secure secret management with minimal configuration overhead.
+          </p>
+          <span class="inline-flex items-center gap-1 text-slash text-xs font-medium">
+            View project <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </span>
+        </a>
+
+        <a href="https://github.com/KostLabs/holidays-lab" target="_blank" rel="noopener"
+           class="fade-in group bg-cream rounded-sm p-7 space-y-4 card-hover border border-dimmed/40" style="transition-delay:0.15s">
+          <div class="flex items-center justify-between">
+            <span class="font-mono text-xs text-slash uppercase tracking-widest">Go</span>
+            <i class="fa-brands fa-github text-ink/30 group-hover:text-ink transition-colors"></i>
+          </div>
+          <h3 class="font-semibold text-lg">holidays-lab</h3>
+          <p class="text-ink/60 text-sm leading-relaxed">
+            A holidays utility library for operational tooling and scheduling systems that need to be calendar-aware.
+          </p>
+          <span class="inline-flex items-center gap-1 text-slash text-xs font-medium">
+            View project <i class="fa-solid fa-arrow-right text-[10px]"></i>
+          </span>
+        </a>
+
+        <!-- More on GitHub card -->
+        <a href="https://github.com/KostLabs" target="_blank" rel="noopener"
+           class="fade-in group bg-ink text-cream rounded-sm p-7 space-y-4 card-hover sm:col-span-2 lg:col-span-2 flex flex-col justify-between" style="transition-delay:0.20s">
+          <div>
+            <p class="text-slash text-xs font-mono uppercase tracking-widest mb-4">And more</p>
+            <h3 class="font-semibold text-xl mb-3">More projects on GitHub.</h3>
+            <p class="text-cream/50 text-sm leading-relaxed">
+              KostLabs is continuously growing. Explore the full organization on GitHub to see everything we're working on — and consider contributing.
+            </p>
+          </div>
+          <span class="inline-flex items-center gap-2 text-slash text-sm font-medium mt-4">
+            <i class="fa-brands fa-github"></i>
+            github.com/KostLabs
+            <i class="fa-solid fa-arrow-right text-xs"></i>
+          </span>
+        </a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── PRINCIPLES ─────────────────────────────────────────────────── -->
+  <section id="principles" class="py-24 px-6 bg-cream">
+    <div class="max-w-6xl mx-auto">
+      <div class="text-center max-w-xl mx-auto mb-16 fade-in space-y-4">
+        <p class="text-slash text-xs font-mono uppercase tracking-widest">How we work</p>
+        <h2 class="text-3xl sm:text-4xl font-bold">Engineering principles.</h2>
+        <p class="text-ink/60 leading-relaxed text-sm">
+          Everything we build is grounded in a consistent set of principles — the same ones documented in our
+          <a href="https://practices.kostlabs.org/#use-contextcontext-consistently" target="_blank" rel="noopener" class="text-slash underline underline-offset-2 hover:text-ink transition-colors">Idiomatic Go Guidelines</a>.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-5">
+
+        <div class="fade-in space-y-3 p-6 border-t-2 border-slash">
+          <i class="fa-solid fa-s text-slash text-lg font-bold"></i>
+          <h3 class="font-semibold">SOLID design</h3>
+          <p class="text-ink/60 text-sm leading-relaxed">Single responsibility, open/closed, dependency inversion — every module has one reason to change.</p>
+        </div>
+
+        <div class="fade-in space-y-3 p-6 border-t-2 border-slash" style="transition-delay:0.05s">
+          <i class="fa-solid fa-eye text-slash text-lg"></i>
+          <h3 class="font-semibold">Observability built-in</h3>
+          <p class="text-ink/60 text-sm leading-relaxed">Structured logging with request IDs, latency, RTT, and typed error categories — from day one.</p>
+        </div>
+
+        <div class="fade-in space-y-3 p-6 border-t-2 border-slash" style="transition-delay:0.10s">
+          <i class="fa-solid fa-code text-slash text-lg"></i>
+          <h3 class="font-semibold">Idiomatic code</h3>
+          <p class="text-ink/60 text-sm leading-relaxed">Consistent naming, clear package boundaries, and conventions aligned with the broader Go ecosystem.</p>
+        </div>
+
+        <div class="fade-in space-y-3 p-6 border-t-2 border-slash" style="transition-delay:0.15s">
+          <i class="fa-solid fa-shield-halved text-slash text-lg"></i>
+          <h3 class="font-semibold">Explicit error handling</h3>
+          <p class="text-ink/60 text-sm leading-relaxed">No panic, no silent failures. Errors are categorized, surfaced, and carry contextual messages.</p>
+        </div>
+
+        <div class="fade-in space-y-3 p-6 border-t-2 border-slash" style="transition-delay:0.25s">
+          <i class="fa-solid fa-tag text-slash text-lg"></i>
+          <h3 class="font-semibold">Conventional commits</h3>
+          <p class="text-ink/60 text-sm leading-relaxed">Structured commit history, semantic versioning, and automated changelogs through consistent message conventions.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── CTA ─────────────────────────────────────────────────────── -->
+  <section class="bg-ink text-cream py-24 px-6">
+    <div class="max-w-3xl mx-auto text-center fade-in space-y-8">
+      <img src="assets/image/logo_no_bg_dark_mode.png"
+           alt="KostLabs" class="h-20 w-auto mx-auto opacity-80" />
+      <h2 class="text-3xl sm:text-4xl font-bold leading-snug">
+        Stop reinventing the wheel.<br/>Start shipping faster.
+      </h2>
+      <p class="text-cream/50 leading-relaxed max-w-xl mx-auto">
+        Browse our open-source libraries, read the guidelines, and join a community building secure, maintainable DevOps infrastructure.
+      </p>
+      <div class="flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="https://github.com/KostLabs" target="_blank" rel="noopener"
+           class="inline-flex items-center justify-center gap-2 bg-cream text-ink px-6 py-3 text-sm font-medium rounded-sm hover:bg-mist transition-colors">
+          <i class="fa-brands fa-github"></i>
+          Explore on GitHub
+        </a>
+        <a href="https://practices.kostlabs.org/#use-contextcontext-consistently" target="_blank" rel="noopener"
+           class="inline-flex items-center justify-center gap-2 border border-cream/20 text-cream px-6 py-3 text-sm font-medium rounded-sm hover:bg-cream/10 transition-colors">
+          <i class="fa-solid fa-book-open"></i>
+          Read the guidelines
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ─── FOOTER ─────────────────────────────────────────────────────── -->
+  <footer class="bg-ink border-t border-cream/10 py-8 px-6">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-4 text-cream/30 text-xs">
+      <div class="flex items-center gap-3">
+        <img src="assets/image/logo_no_bg_dark_mode.png" alt="KostLabs" class="h-5 w-auto opacity-40" />
+        <span>© <span id="footer-year"></span> KostLabs. All rights reserved.</span>
+      </div>
+      <div class="flex items-center gap-6">
+        <a href="https://github.com/KostLabs" target="_blank" rel="noopener"
+           class="hover:text-cream/60 transition-colors flex items-center gap-1.5">
+          <i class="fa-brands fa-github"></i> GitHub
+        </a>
+        <a href="https://practices.kostlabs.org/#use-contextcontext-consistently" target="_blank" rel="noopener"
+           class="hover:text-cream/60 transition-colors flex items-center gap-1.5">
+          <i class="fa-solid fa-book"></i> Guidelines
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js" defer></script>
+</body>
+</html>
